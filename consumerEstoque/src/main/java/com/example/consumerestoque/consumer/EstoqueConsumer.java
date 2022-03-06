@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class EstoqueConsumer {
 
-    @RabbitListener(queues = "queue.estoque")
+    @RabbitListener(queues = "queue.estoque", containerFactory = "customRabbitListenerContainer")
     private void consumerMessage(@Payload EstoqueDTO estoqueDTO){
         log.info("Process: {}", estoqueDTO);
     }

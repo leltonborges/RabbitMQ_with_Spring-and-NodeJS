@@ -9,6 +9,10 @@ spring:
     port: ${RABBITMQ_PORT:5672}
     username: ${RABBITMQ_USERNAME:guest}
     password: ${RABBITMQ_PASSWORD:guest}
+#    listener:
+#      direct:
+#        prefetch: 2 # Quantidade de messagem por vezes até receber a confirmação
+#      type: direct # Tipo do ouvinte
 
 amqp:
   exchange: rabbitmq.test
