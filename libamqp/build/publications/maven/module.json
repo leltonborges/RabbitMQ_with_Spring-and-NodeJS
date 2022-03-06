@@ -1,0 +1,69 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.lib.amqp",
+    "module": "amqp",
+    "version": "1.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "amqp-1.0-SNAPSHOT.jar",
+          "url": "amqp-1.0-SNAPSHOT.jar",
+          "size": 3779,
+          "sha512": "038769b29d53a0d17b14400518233ea5c192aecbe2286ab674865b4d1e8d27bd1abf7681e33475a6ebfa4ae87f712825921ce9b8f0c802ef0bc9c5434a31cb8b",
+          "sha256": "baf47a6b07f72c465da07aebe8ce60b3f3ce033ce4dc14e72c709366d7b5b0b6",
+          "sha1": "b7ffb1e5b2ea7a98819d13988fc10b53593412f6",
+          "md5": "996c9ba5935ee06d682f0600639b6713"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-amqp",
+          "version": {
+            "requires": "2.6.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "amqp-1.0-SNAPSHOT.jar",
+          "url": "amqp-1.0-SNAPSHOT.jar",
+          "size": 3779,
+          "sha512": "038769b29d53a0d17b14400518233ea5c192aecbe2286ab674865b4d1e8d27bd1abf7681e33475a6ebfa4ae87f712825921ce9b8f0c802ef0bc9c5434a31cb8b",
+          "sha256": "baf47a6b07f72c465da07aebe8ce60b3f3ce033ce4dc14e72c709366d7b5b0b6",
+          "sha1": "b7ffb1e5b2ea7a98819d13988fc10b53593412f6",
+          "md5": "996c9ba5935ee06d682f0600639b6713"
+        }
+      ]
+    }
+  ]
+}

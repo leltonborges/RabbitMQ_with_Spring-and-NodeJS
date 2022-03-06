@@ -1,0 +1,3 @@
+rootProject.name = 'EstoquePreco'
+include('app', 'list', 'utilities')
+

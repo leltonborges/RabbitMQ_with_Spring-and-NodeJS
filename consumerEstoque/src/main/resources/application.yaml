@@ -1,0 +1,17 @@
+server:
+  port: ${PORT:9081}
+spring:
+  application:
+    name: app-consumer-estoque
+
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+
+amqp:
+  exchange: rabbitmq.test
+  queue:
+    estoque: queue.estoque
+    price: queue.price

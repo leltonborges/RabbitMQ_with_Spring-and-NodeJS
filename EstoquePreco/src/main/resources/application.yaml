@@ -1,0 +1,15 @@
+server:
+  port: 9080
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+amqp:
+  exchange: rabbitmq.test
+  queue:
+    estoque: queue.estoque
+    price: queue.price
