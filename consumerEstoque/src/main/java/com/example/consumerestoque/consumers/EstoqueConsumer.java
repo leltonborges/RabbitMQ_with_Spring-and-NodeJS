@@ -1,4 +1,4 @@
-package com.example.consumerestoque.consumer;
+package com.example.consumerestoque.consumers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -13,5 +13,6 @@ public class EstoqueConsumer {
     @RabbitListener(queues = "queue.estoque", containerFactory = "customRabbitListenerContainer")
     private void consumerMessage(@Payload EstoqueDTO estoqueDTO){
         log.info("Process: {}", estoqueDTO);
+//        throw new IllegalArgumentException("invalid");
     }
 }
