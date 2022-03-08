@@ -1,6 +1,9 @@
 server:
   port: ${PORT:9082}
 spring:
+  application:
+    name: app-consumer-estoque
+
   rabbitmq:
     host: ${RABBITMQ_HOST:localhost}
     port: ${RABBITMQ_PORT:5672}
@@ -18,15 +21,9 @@ spring:
 amqp:
   exchange: rabbitmq.test
   queue:
-    estoque: queue.estoque
-    price: queue.price
+    estoque: queueEstoque10
+    price: queuePrice10
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  endpoint:
-    health:
-      enabled: true
-      show-details: always
+item:
+  name: name_item
+  email: foo@bar.com

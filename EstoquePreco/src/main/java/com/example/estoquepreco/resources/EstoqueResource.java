@@ -28,9 +28,10 @@ public class EstoqueResource {
     @PutMapping
     public ResponseEntity updateEstoque(@RequestBody EstoqueDTO estoqueDTO) {
         try {
-            log.info("estoque: {}", estoqueDTO);
             String objJson = objectMapper.writeValueAsString(estoqueDTO);
-            this.sendMessage.sendMessage(queueEstoque, objJson);
+            log.info("estoque: {}", estoqueDTO);
+            log.info("json: {}", objJson);
+            this.sendMessage.sendMessage(queueEstoque, estoqueDTO);
             return ResponseEntity.ok().build();
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
